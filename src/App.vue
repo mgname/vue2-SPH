@@ -17,7 +17,11 @@ export default {
   components: {
     Header,
     Footer
-  }
+  },
+  mounted() {
+    // 通知Vuex发送请求，获取商品分类的三级列表的数据，存储于仓库当中（在App组件中只用发送一次请求即可）
+    this.$store.dispatch('home/categoryList')
+  },
 }
 </script>
 

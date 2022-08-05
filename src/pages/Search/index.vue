@@ -1,9 +1,6 @@
 <template>
   <div>
-    我是搜索
-    <!-- {{ keyword }} -->
-    {{ $route.params.keyword }}
-    {{ $route.query.k }}
+    <TypeNav />
   </div>
 </template>
 

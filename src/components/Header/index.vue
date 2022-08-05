@@ -92,7 +92,9 @@ export default {
 
       // 面试题4:路由组件能不能传递props数据?
       // 可以的:三种写法，在路由配置中进行配置
-      this.$router.push({name: 'search', query: {k: this.keyword.toUpperCase()}, params: {keyword: this.keyword}})
+
+      // 如果路由包含query参数也捎带过去 this.$route.query
+      this.$router.push({name: 'search', query: this.$route.query, params: {keyword: this.keyword || undefined}})
     }
   },
 }
